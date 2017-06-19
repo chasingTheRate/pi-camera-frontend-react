@@ -7,12 +7,21 @@ class App extends Component {
 
   constructor(props){
     super(props)
-
+    this.handlePan = this.handlePan.bind(this);
   }
 
-  pan(direction){
-    console.log("pan");
+  handlePan(direction){
+    console.log(`pan direction: ${direction}`);
+    axios({
+      method: 'post',
+      url: 'http://localhost:3000/test',
+      data: {
+        firstName: 'Fred',
+        lastName: 'Flintstone'
+      }
+    });
   }
+
   componentDidMount() {
     console.log('App did mount');
   }
@@ -44,11 +53,21 @@ class App extends Component {
           <div className="page-content">
             <div className="mdl-grid">
               <div className="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-                <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                onClick={() => this.handlePan('left')}>
                   Pan Left
                 </button>
-                <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                onClick={() => this.handlePan('right')}>
                   Pan Right
+                </button>
+                <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                onClick={() => this.handlePan('up')}>
+                  Pan Up
+                </button>
+                <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                onClick={() => this.handlePan('down')}>
+                  Pan Down
                 </button>
               </div>
             </div>
