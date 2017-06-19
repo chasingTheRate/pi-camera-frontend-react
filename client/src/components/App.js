@@ -15,7 +15,7 @@ class App extends Component {
     console.log(`${process.env.IP}/test`);
     axios({
       method: 'post',
-      url: `${process.env.IP}/test`,
+      url: '/test',
       data: {
         firstName: 'Fred',
         lastName: 'Flintstone'
