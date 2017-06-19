@@ -14,7 +14,7 @@ class App extends Component {
     console.log(`pan direction: ${direction}`);
     axios({
       method: 'post',
-      url: 'http://localhost:3000/test',
+      url: `${process.env.IP}/test`,
       data: {
         firstName: 'Fred',
         lastName: 'Flintstone'
