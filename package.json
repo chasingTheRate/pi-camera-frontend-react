@@ -29,7 +29,7 @@
     "webpack-hot-middleware": "^2.18.0"
   },
   "scripts": {
-    "dev": "nodemon ./server/server-dev.js --ignore './client'"
+    "dev": "nodemon ./server.js --ignore './client'"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
