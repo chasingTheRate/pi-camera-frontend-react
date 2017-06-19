@@ -12,6 +12,7 @@ class App extends Component {
 
   handlePan(direction){
     console.log(`pan direction: ${direction}`);
+    console.log(`${process.env.IP}/test`);
     axios({
       method: 'post',
       url: `${process.env.IP}/test`,
