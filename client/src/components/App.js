@@ -15,7 +15,7 @@ class App extends Component {
     console.log(`http://192.168.86.38:3000/test`);
     axios({
       method: 'post',
-      url: '/test',
+      url: 'http://192.168.86.38:3000/test',
       data: {
         firstName: 'Fred',
         lastName: 'Flintstone'
