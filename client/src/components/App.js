@@ -9,6 +9,10 @@ class App extends Component {
     super(props)
 
   }
+
+  pan(direction){
+    console.log("pan");
+  }
   componentDidMount() {
     console.log('App did mount');
   }
@@ -39,7 +43,14 @@ class App extends Component {
         <main className="mdl-layout__content">
           <div className="page-content">
             <div className="mdl-grid">
-
+              <div className="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
+                <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                  Pan Left
+                </button>
+                <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                  Pan Right
+                </button>
+              </div>
             </div>
           </div>
         </main>

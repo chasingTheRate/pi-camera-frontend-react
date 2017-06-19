@@ -4,7 +4,7 @@
 }
 
 .mdl-cell{
-  background-color: green;
+
 }
 
 .mdl-data-table {
@@ -18,4 +18,8 @@
   margin-right: auto;
   overflow-y: scroll;
   overflow-x: scroll;
+}
+
+.mdl-button {
+  margin: 10px;
 }
